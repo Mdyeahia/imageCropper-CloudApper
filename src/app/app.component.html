@@ -8,7 +8,10 @@
     </div>
     <div class="col-md-6">
       <div class="webcam-container" *ngIf="webcamImage">
-        <image-cropper [imageURL]="webcamImage?.imageAsDataUrl" (imageCropped)="imageCropped($event)"></image-cropper>
+        <image-cropper
+        [maintainAspectRatio]="false"
+        [imageURL]="webcamImage?.imageAsDataUrl" (imageCropped)="imageCropped($event)"></image-cropper>
+
       </div>
     </div>
   </div>
